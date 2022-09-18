@@ -1,0 +1,320 @@
+/*? Resources:*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,300&family=Lato:ital,wght@0,300;1,300;1,400;1,700&family=Libre+Baskerville&family=Montserrat:ital,wght@0,400;0,500;0,700;1,300&family=Poppins:ital,wght@1,200&family=Raleway:ital,wght@0,300;0,600;1,400&family=Roboto:ital,wght@0,500;1,300&family=Slabo+13px&display=swap');
+/*
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Slabo 13px', serif;
+*/
+
+
+
+:root {
+    --darkblack1: #010101;
+    --coolwhite: #ededed;
+    --purpcol: #9da2ff;
+    --cooldark1: #303136;
+    --cooldark2: #202124;
+    --cooldark3: #303136;
+    --cooldark4: #191919;
+    --cooldark5: #1b1c1e;
+    --bluedark: #2c333f;
+    --bluedark2: #162c35;
+    --white: #ffffff;
+    --darkwhite: #f8f9fa;
+    --coolgray: #a5a7af;
+    --coolyellow: #d7b000;
+
+}
+
+
+
+* {
+    outline: none;
+}
+
+body {
+
+    color: var(--coolwhite);
+    margin: 0;
+    height: clamp(42rem, 58.5rem, 60vw);
+}
+
+.site {
+    width: 100%;
+    height: 100%;
+    background-color: var(--coolwhite);
+    display: block;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkwhite);
+}
+
+.menu {
+    width: 3.5rem;
+    height: 100%;
+    position: fixed;
+    background-color: var(--cooldark4);
+    background-image: linear-gradient(#191919 30%, #232323 70%);
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    box-shadow: 5px 0px 10px rgb(49, 49, 49);
+}
+
+.menuroll {
+    width: 3.5rem;
+    height: 100%;
+    position: fixed;
+    background-image: linear-gradient(#303136, rgb(61, 64, 76));
+    filter: drop-shadow(0 0 20px #303136);
+    display: none;
+    opacity: 0;
+    z-index: 2;
+    -webkit-filter: drop-shadow(0 0 20px #303136);
+    justify-content: right;
+
+}
+
+.lgcontent {
+    width: 18.6rem;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.logo {
+    width: 16rem;
+    padding-top: clamp(1.5rem, 2.3rem, 3vw);
+    padding-bottom: 2rem;
+
+    border-bottom: 0.3rem solid #ededed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo h1 {
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(1.2rem, 1.5rem, 1.6vw);
+    font-weight: normal;
+    margin: 0.5rem;
+}
+
+.logo h2 {
+    color: var(--darkwhite);
+    font-size: clamp(1rem, 1.2rem, 1.25vw);
+    font-weight: normal;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.buttons {
+    width: 100%;
+    padding-top: clamp(2rem, 2.5rem, 3vw);
+    padding-bottom: clamp(0.2rem, 2.5rem, 3vw);
+    height: 25rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.mnus {
+    width: 75%;
+    border: none;
+    height: 4rem;
+    background-color: rgb(255, 172, 17);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    transition: background-color 500ms;
+    -webkit-transition: background-color 500m;
+    -moz-transition: background-color 500m;
+    -ms-transition: background-color 500m;
+    -o-transition: background-color 500m;
+}
+
+.mnus:hover {
+    background-color: rgb(255, 128, 0);
+}
+
+.mnus p {
+    color: var(--white);
+    font-family: 'Slabo 13px', serif;
+    font-size: clamp(0.9rem, 1rem, 1.25vw);
+    font-weight: bold;
+
+}
+
+
+.send {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    height: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.emaili {
+    width: 50%;
+    height: 1.3rem;
+    border-radius: 0.5rem;
+    border: none;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    text-align: center;
+}
+
+.texti {
+    width: 70%;
+    height: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    resize: none;
+    border-radius: 0.5rem;
+}
+
+.send button {
+    width: 5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.contact {
+    width: 100%;
+    height: 5rem;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h2 {
+    color: var(--darkwhite);
+    font-size: clamp(1rem, 1.2rem, 1.25vw);
+    font-weight: normal;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    opacity: 80%;
+}
+
+.bmi {
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 110%;
+    opacity: 20%;
+    color: var(--darkwhite);
+    font-weight: normal;
+}
+
+.logotext {
+    width: 100%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 6rem;
+}
+
+.mn {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Slabo 13px', serif;
+    font-weight: normal;
+    font-size: 70%;
+    transition: scale 500ms;
+    -webkit-transition: scale 500ms;
+    -moz-transition: scale 500ms;
+    -ms-transition: scale 500ms;
+    -o-transition: scale 500ms;
+    cursor: default;
+}
+
+.mn:hover h1 {
+    scale: 110%;
+}
+
+.con {
+    width: 100%;
+    height: 49rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.con span {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.8rem, 1.2rem, 1.25vw);
+
+}
+
+.spann {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.4rem, 1.8rem, 2vw);
+    cursor: default;
+}
+
+#hidehe {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+
+    #hidehe {
+        display: flex;
+    }
+
+    .send {
+        display: none;
+    }
+
+}
