@@ -17,6 +17,7 @@ font-family: 'Slabo 13px', serif;
     --darkblack1: #010101;
     --coolwhite: #ededed;
     --purpcol: #9da2ff;
+    --cooldark0: #43444b;
     --cooldark1: #303136;
     --cooldark2: #202124;
     --cooldark3: #303136;
@@ -67,6 +68,7 @@ body {
     flex-direction: column;
     z-index: 3;
     box-shadow: 5px 0px 10px rgb(49, 49, 49);
+    cursor: default;
 }
 
 .menuroll {
@@ -287,6 +289,15 @@ body {
     align-items: center;
     font-size: clamp(0.8rem, 1.2rem, 1.25vw);
 
+
+}
+
+.con span:hover {
+    transform: scale(120%);
+    -webkit-transform: scale(120%);
+    -moz-transform: scale(120%);
+    -ms-transform: scale(120%);
+    -o-transform: scale(120%);
 }
 
 .spann {
@@ -299,12 +310,133 @@ body {
     cursor: default;
 }
 
+.spann:hover {
+    transform: scale(120%);
+    -webkit-transform: scale(120%);
+    -moz-transform: scale(120%);
+    -ms-transform: scale(120%);
+    -o-transform: scale(120%);
+}
+
 #hidehe {
     display: none;
 }
 
+.message {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: -200rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: clamp(0.05rem, 0.7rem, 0.8vw);
+    background-color: var(--cooldark0);
+    width: clamp(22rem, 50rem, 52vw);
+    height: clamp(8rem, 12rem, 13vw);
+    border-radius: 1rem;
+    z-index: 5;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    transition: ease-in 500ms;
+    -webkit-transition: ease-in-out 500ms;
+    -moz-transition: ease-in 500ms;
+    -ms-transition: ease-in 500ms;
+    -o-transition: ease-in 500ms;
+    background-image: linear-gradient(#26272a, #232323);
+    filter: drop-shadow(0 0 2px #26272a);
+    -webkit-filter: drop-shadow(0 0 2px #26272a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
 
 
+
+#exit {
+    width: clamp(3rem, 4rem, 3.6vw);
+    height: 2rem;
+    position: absolute;
+    border: none;
+    top: 0;
+    right: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 100%;
+    border-radius: 0rem 1rem 0rem 1rem;
+    -webkit-border-radius: 0rem 1rem 0rem 1rem;
+    -moz-border-radius: 0rem 1rem 0rem 1rem;
+    -ms-border-radius: 0rem 1rem 0rem 1rem;
+    -o-border-radius: 0rem 1rem 0rem 1rem;
+    background-color: rgb(209, 0, 0);
+    background-image: linear-gradient(rgb(209, 0, 0), rgb(250, 0, 0));
+    filter: drop-shadow(0 0 2px red);
+    color: white;
+    -webkit-filter: drop-shadow(0 0 2px red);
+}
+
+.msbut {
+    width: clamp(12rem, 28rem, 52vw);
+    height: clamp(3rem, 5rem, 6vw);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mstext {
+
+    height: clamp(5rem, 7rem, 8vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.butt {
+    width: 30%;
+    height: 50%;
+}
+
+.txmessage {
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mstext {
+    width: 70%;
+    height: clamp(5rem, 7rem, 8vw);
+
+
+
+}
+
+.butt {
+    width: 30%;
+    height: 50%;
+    border: none;
+    background-color: #ededed;
+    color: #000;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    font-size: clamp(0.8rem, 1rem, 1.1vw);
+}
+
+.txmessage {
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: clamp(1rem, 1.2rem, 1.3vw);
+}
 
 @media screen and (max-width: 600px) {
 
@@ -315,6 +447,12 @@ body {
 
     .send {
         display: none;
+    }
+
+    .message {
+        position: fixed;
+        bottom: 0;
+        right: -250%;
     }
 
 }
