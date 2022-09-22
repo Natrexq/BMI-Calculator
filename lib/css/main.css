@@ -32,7 +32,15 @@ font-family: 'Slabo 13px', serif;
 
 }
 
-
+@keyframes rgb {
+    0%    {color: orange;}
+    20%    {color: rgb(0, 247, 255);}
+    40%   {color: greenyellow;}
+    60%   {color: yellow;}
+    80%   {color: red;}
+    95%   {color: rgb(255, 0, 255);}
+    100%    {color: orange;}
+  }
 
 * {
     outline: none;
@@ -116,6 +124,20 @@ body {
     font-weight: normal;
     margin: 0.5rem;
 }
+.logo b {
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(1.2rem, 1.5rem, 1.6vw);
+    font-weight: normal;
+    margin: 0.5rem;
+    transition: color 1000ms;
+    animation-name: rgb;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    -webkit-transition: color 1000ms;
+    -moz-transition: color 1000ms;
+    -ms-transition: color 1000ms;
+    -o-transition: color 1000ms;
+}
 
 .logo h2 {
     color: var(--darkwhite);
@@ -142,7 +164,7 @@ body {
     width: 75%;
     border: none;
     height: 4rem;
-    background-color: rgb(255, 172, 17);
+    background-color: #88B04B;
     border-radius: 0.5rem;
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
@@ -156,7 +178,7 @@ body {
 }
 
 .mnus:hover {
-    background-color: rgb(255, 128, 0);
+    background-color: #79a33b;
 }
 
 .mnus p {
@@ -265,6 +287,7 @@ body {
     -ms-transition: scale 500ms;
     -o-transition: scale 500ms;
     cursor: default;
+    color: #88B04B;
 }
 
 .mn:hover h1 {
