@@ -35,24 +35,35 @@
                         <p> Count BMI</p>
                     </button>
                     <button class="mnus" type="submit">
-                        <p>Help with losing weight</p>
+                        <p>What's New</p>
                     </button>
                     <button class="mnus" type="submit">
                         <p>Helpful sites</p>
                     </button>
                     <button class="mnus" type="submit">
-                        <p>What's New</p>
+                        <p>5 foods ideas</p>
                     </button>
                     <button class="mnus" type="submit">
                         <p>Git Hub</p>
                     </button>
                 </div>
                 <div class="send">
-                    <input class="emaili" type="email" name="" id="" placeholder="example@domain.com">
+                    <div class="msg" id="msg">
+                        <span></span>
+                        <label id="emlbl" class="lbl" for="emi"></label>
+                        <label id="txlbl" class="lbl" for="txi"></label>
+                    </div>
 
-                    <textarea class="texti" name="" id="" cols="5" rows="5" placeholder="Your Message..."
-                        maxlength="120"></textarea>
-                    <button>Contact</button>
+                    <form id="conform" action="backend.html" method="post">
+
+
+                        <input class="emaili" type="email" name="emi" id="email" placeholder="email@example.com">
+
+                        <textarea class="texti" name="txi" id="txarea" cols="5" rows="5" placeholder="Your Message..."
+                            maxlength="120"></textarea>
+                        <button id="cont">Contact</button>
+                    </form>
+
                 </div>
                 <div class="contact">
                     <h2>Contact with us useing email:</h2>
@@ -65,14 +76,24 @@
         </div>
         <div id="menu" class="menu">
             <div id="mnbut" class="mn">
-                <h1>&#9776;</h1>
+                <h1></h1>
 
             </div>
 
             <div id="conn" class="con">
-                <span id="">&#9788;</span>
-                <span id="">&#9790;</span>
-                <span id="spreport">&#9873;</span>
+                <span class="icspan" id="">
+                    <span id="lmode"></span>
+                </span>
+                <span class="icspan" id="">
+                    <span id="nmode"></span>
+                </span>
+
+                <span class="icspan" id="spreport">
+                    <span>&#9873;</span>
+                </span>
+                <span class="icspan" id="">
+                    <span id="git"></span>
+                </span>
 
             </div>
             <div class="logotext">
@@ -93,6 +114,7 @@
 
     <script src="/lib/js/main.js"></script>
     <script src="/lib/js/report.js"></script>
+    <script src="/lib/js/preformbackend.js"></script>
 </body>
 
 

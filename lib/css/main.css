@@ -32,15 +32,27 @@ font-family: 'Slabo 13px', serif;
 
 }
 
-@keyframes rgb {
-    0%    {color: orange;}
-    20%    {color: rgb(0, 247, 255);}
-    40%   {color: greenyellow;}
-    60%   {color: yellow;}
-    80%   {color: red;}
-    95%   {color: rgb(255, 0, 255);}
-    100%    {color: orange;}
-  }
+@keyframes title {
+    0% {
+        color: #88B04B;
+    }
+
+    25% {
+        color: #8ec63a;
+    }
+
+    50% {
+        color: #9df01f;
+    }
+
+    75% {
+        color: #8ec63a;
+    }
+
+    100% {
+        color: #88B04B;
+    }
+}
 
 * {
     outline: none;
@@ -124,14 +136,15 @@ body {
     font-weight: normal;
     margin: 0.5rem;
 }
+
 .logo b {
     font-family: 'Lato', sans-serif;
     font-size: clamp(1.2rem, 1.5rem, 1.6vw);
     font-weight: normal;
     margin: 0.5rem;
     transition: color 1000ms;
-    animation-name: rgb;
-    animation-duration: 8s;
+    animation-name: title;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     -webkit-transition: color 1000ms;
     -moz-transition: color 1000ms;
@@ -184,6 +197,8 @@ body {
 .mnus p {
     color: var(--white);
     font-family: 'Slabo 13px', serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: clamp(0.9rem, 1rem, 1.25vw);
     font-weight: bold;
 
@@ -191,44 +206,124 @@ body {
 
 
 .send {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+
     width: 100%;
-    height: 10rem;
+    height: 14rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.emaili {
+    width: 50%;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 90%;
+}
+
+.texti {
+    width: 70%;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    resize: none;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+}
+
+.send button {
+    width: 5.5rem;
+    height: 2.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #3b79a3;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    transition: 300ms scale;
+    -webkit-transition: 300ms scale;
+    -moz-transition: 300ms scale;
+    -ms-transition: 300ms scale;
+    -o-transition: 300ms scale;
+}
+
+.send form {
+    width: 100%;
+
+
+
+    height: 11rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+
 }
 
-.emaili {
-    width: 50%;
-    height: 1.3rem;
+.send:hover button {
+    scale: 110%;
+
+}
+
+.msg {
+    position: absolute;
+    opacity: 0%;
+    transition: opacity 500ms;
+    padding-inline: 0.8rem;
     border-radius: 0.5rem;
-    border: none;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: -2px 0px 24px -7px rgba(66, 68, 90, 1);
+    background-color: #ffffff;
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
     -ms-border-radius: 0.5rem;
     -o-border-radius: 0.5rem;
-    text-align: center;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
 }
 
-.texti {
-    width: 70%;
-    height: 5rem;
-    display: flex;
-    flex-wrap: wrap;
-    resize: none;
-    border-radius: 0.5rem;
+.msg span {
+    width: 2rem;
+    height: 2rem;
+
+    background-image: url('/lib/css/icons/warning.png');
+
+    background-size: cover;
 }
 
-.send button {
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
+.lbl {
+
+
+    padding: none;
+    margin: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 93%;
 }
 
 .contact {
@@ -281,18 +376,35 @@ body {
     font-family: 'Slabo 13px', serif;
     font-weight: normal;
     font-size: 70%;
-    transition: scale 500ms;
-    -webkit-transition: scale 500ms;
-    -moz-transition: scale 500ms;
-    -ms-transition: scale 500ms;
-    -o-transition: scale 500ms;
+    transition: scale 500ms, transform 330ms ease-in-out;
+    -webkit-transition: scale 500ms, transform 330ms ease-in-out;
+    -moz-transition: scale 500ms, transform 330ms ease-in-out;
+    -ms-transition: scale 500ms, transform 330ms ease-in-out;
+    -o-transition: scale 500ms, transform 330ms ease-in-out;
     cursor: default;
-    color: #88B04B;
+
+
+}
+
+.mn h1 {
+    width: 40%;
+    height: 1.4rem;
+    background-image: url('/lib/css/icons/home.png');
+    background-size: cover;
+    opacity: 70%;
+    transition: opacity 300ms, scale 300ms;
+    -webkit-transition: opacity 300ms, scale 300ms;
+    -moz-transition: opacity 300ms, scale 300ms;
+    -ms-transition: opacity 300ms, scale 300ms;
+    -o-transition: opacity 300ms, scale 300ms;
 }
 
 .mn:hover h1 {
     scale: 110%;
+    opacity: 85%;
+
 }
+
 
 .con {
     width: 100%;
@@ -304,24 +416,63 @@ body {
 
 }
 
-.con span {
+
+
+
+
+.icspan {
     width: 100%;
     height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: clamp(0.8rem, 1.2rem, 1.25vw);
-
+    transition: scale 300ms, transform 300ms ease-in-out;
+    -webkit-transition: scale 300ms, transform 300ms ease-in-out;
+    -moz-transition: scale 300ms, transform 300ms ease-in-out;
+    -ms-transition: scale 300ms, transform 300ms ease-in-out;
+    -o-transition: scale 300ms, transform 300ms ease-in-out;
 
 }
 
-.con span:hover {
-    transform: scale(120%);
-    -webkit-transform: scale(120%);
-    -moz-transform: scale(120%);
-    -ms-transform: scale(120%);
-    -o-transform: scale(120%);
+.icspan span {
+    width: 50%;
+    height: 55%;
+    transition: scale 300ms, opacity 300ms;
+    -webkit-transition: scale 300ms, opacity 300ms;
+    -moz-transition: scale 300ms, opacity 300ms;
+    -ms-transition: scale 300ms, opacity 300ms;
+    -o-transition: scale 300ms, opacity 300ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 80%;
 }
+
+.icspan span:hover {
+    scale: 110%;
+    opacity: 90%;
+}
+
+#nmode {
+    background-image: url('/lib/css/icons/nightmode.png');
+    background-size: cover;
+
+}
+
+#lmode {
+    background-image: url('/lib/css/icons/lightmode.png');
+    background-size: cover;
+}
+
+#git {
+    width: 45%;
+    height: 50%;
+    background-image: url('/lib/css/icons/githublogo.png');
+    background-size: cover;
+}
+
+
 
 .spann {
     width: 100%;
@@ -331,6 +482,12 @@ body {
     align-items: center;
     font-size: clamp(1.4rem, 1.8rem, 2vw);
     cursor: default;
+    transition: transform 500ms;
+    -webkit-transition: transform 500ms;
+    -moz-transition: transform 500ms;
+    -ms-transition: transform 500ms;
+    -o-transition: transform 500ms;
+    color: #9df01f;
 }
 
 .spann:hover {
