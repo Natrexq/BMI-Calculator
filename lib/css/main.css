@@ -83,27 +83,30 @@ font-family: 'Space Grotesk', sans-serif;
 
 body {
 
-    color: var(--coolwhite);
+    background-color: #79a33b;
+  
+    
+    height: 100vh;
+    padding: 0;
     margin: 0;
-
-    height: clamp(41.1rem, 65.1rem, 65vw);
 }
 
 .site {
     width: 100%;
-    height: 100%;
-    background-color: var(--coolwhite);
+
+    
     display: block;
 }
 
 .content {
-    width: 100%;
+    width: 100;
     height: 100%;
-    background-color: var(--darkwhite);
+    
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
+    background-color: red;
 }
 
 .conback {
@@ -113,15 +116,16 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+  
 
 }
 
 .welcome {
 
     width: 100%;
-    height: clamp(5.5rem, 12.5rem, 10.5vw);
+    height: clamp(10vh,20vh,21vh);
     background-color: var(--cooldark5);
-    background-image: linear-gradient(#1b1c1e, #262626);
+   
 
     display: flex;
     justify-content: center;
@@ -145,11 +149,225 @@ body {
 }
 
 .counterbd {
+    position: relative;
     width: 100%;
-    height: clamp(35.7rem, 53rem, 55vw);
+
+    height: 80vh;
+    
     background-image: linear-gradient(#262626, #1b1c1e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .bd_content{
+        position: relative;
+        width: clamp(18rem,120rem,65vw);
+        height: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+    }
+        .data{
+            width: clamp(18rem,60rem,65vw);
+            height: 50vh;
+            background-image: linear-gradient( to right,#212121, #1b1c1e);
+            box-shadow: 0px  -10px 20px #212121;
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+}   
+            .data_t{
+                width: 100%;
+                height: 25%;
+               
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+                .data_t h2 {
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: clamp(1rem, 2rem, 3.2vw);
+                    margin: 0;
+                    color: var(--lightgreen);
+                
+                }
+                
+                .data_t h3 {
+                    margin: 0.3rem;
+                    color: var(--poggreen);
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: clamp(0.8rem, 1.1rem, 1.5vw);
+                }
+            .data_in{
+                width: 100%;
+                height: 75%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                gap: 1.5rem;
+            }       
+
+                    .genderbc{
+                        width: clamp(5rem,25rem,52vh);
+                        height: clamp(4rem,6.5rem,10vh);
+                      
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+                    }
+                    .data_in input{
+                        width: clamp(5rem,10rem,11vw);
+                        height: 15%;
+                        background-color: var(--cooldark5);
+                        border: none;
+                        text-align: center;
+                        color: var(--lightgreen);
+                        font-family: 'Roboto Mono', monospace;
+                        border-radius: 1rem;
+                        -webkit-border-radius: 1rem;
+                        -moz-border-radius: 1rem;
+                        -ms-border-radius: 1rem;
+                        -o-border-radius: 1rem;
+                        filter: drop-shadow(0px 0px 5px var(--lightgreen));
+                        -webkit-filter: drop-shadow(0px 0px 5px var(--lightgreen));
+                        transition: filter 500ms;
+                        -webkit-transition: filter 500ms;
+                        -moz-transition: filter 500ms;
+                        -ms-transition: filter 500ms;
+                        -o-transition: filter 500ms;
+}
+                        .data_in input:hover,.data_in input:focus{
+                            filter: drop-shadow(0px 0px 7px var(--lightgreen));
+                            -webkit-filter: drop-shadow(0px 0px 7px var(--lightgreen));
+}
+                            .data_in button{
+                                width: clamp(6rem,8rem,9vw);
+                                height: 4rem;
+                                background-color: var(--cooldark5);
+                                border-radius: 1rem;
+                                -webkit-border-radius: 1rem;
+                                -moz-border-radius: 1rem;
+                                -ms-border-radius: 1rem;
+                                -o-border-radius: 1rem;
+                                color: var(--coolyellow);
+                                font-family: 'Roboto Mono', monospace;
+                                border: none;
+                                filter: drop-shadow(0px 0px 5px var(--coolyellow));
+                                -webkit-filter: drop-shadow(0px 0px 5px var(--coolyellow));
+                                transition: filter 500ms;
+                                -webkit-transition: filter 500ms;
+                                -moz-transition: filter 500ms;
+                                -ms-transition: filter 500ms;
+                                -o-transition: filter 500ms;
+                                font-size: clamp(0.8rem, 1.1rem, 1.5vw);
+}
+                                    .data_in button:hover{
+                                        filter: drop-shadow(0px 0px 8px var(--coolyellow));
+                                        -webkit-filter: drop-shadow(0px 0px 8px var(--coolyellow));
+}
+                        .gender{
+                            width: clamp(4rem,7.5rem,11vw);
+                            background-color: var(--cooldark5);
+                            height: 100%;
+                            border-radius: 1rem;
+                            -webkit-border-radius: 1rem;
+                            -moz-border-radius: 1rem;
+                            -ms-border-radius: 1rem;
+                            -o-border-radius: 1rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            }
+                            .gender h2{
+                                font-family: 'Roboto Mono', monospace;
+                                font-size: clamp(1rem, 1.8rem, 1.5vw);
+                            }
+                          
+                            #male{
+                                filter: drop-shadow(0px 0px 5px #454fda);
+                                -webkit-filter: drop-shadow(0px 0px 5px #454fda);
+                                transition: filter 500ms;
+                                -webkit-transition: filter 500ms;
+                                -moz-transition: filter 500ms;
+                                -ms-transition: filter 500ms;
+                                -o-transition: filter 500ms;
+                                display: flex;
+                                }
+                                #male h2{
+                                    color: #454fda;
+                                }
+                                    
+                            #male:hover{
+                                filter: drop-shadow(0px 0px 10px #454fda);
+                                -webkit-filter: drop-shadow(0px 0px 10px #454fda);
+}
+                            #female{
+                                filter: drop-shadow(0px 0px 5px #da45d8);
+                                -webkit-filter: drop-shadow(0px 0px 5px #da45d8);
+                                transition: filter 500ms;
+                                -webkit-transition: filter 500ms;
+                                -moz-transition: filter 500ms;
+                                -ms-transition: filter 500ms;
+                                -o-transition: filter 500ms;
+                            }
+                            #female h2{
+                                color: #da45d8;
+                            }
+                               
+                            #female:hover{
+                                filter: drop-shadow(0px 0px 10px #da45d8);
+                                -webkit-filter: drop-shadow(0px 0px 10px #da45d8);
 }
 
+        .res_back{
+            width: clamp(18rem,40rem,65vw);
+            height: clamp(12vh,20vh,21vw);
+            background-image: linear-gradient( to right,#1b1c1e, #1b1c1e);
+            box-shadow: 0px  -10px 20px #212121;
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+            .res_back h1 {
+                
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: clamp(1rem, 2rem, 3.2vw);
+                    margin: 0;
+                    color: var(--poggreen);
+                
+                
+            }
+            .res_back h2 {
+                
+                font-family: 'Roboto Mono', monospace;
+                font-size: clamp(0.8rem, 1.7rem, 3.2vw);
+                margin: 0;
+                color: var(--lightgreen);
+            
+            
+            }
+            .res_back h3 {
+                    
+                font-family: 'Roboto Mono', monospace;
+                font-size: clamp(0.7rem, 1.5rem, 3.2vw);
+                margin: 0;
+                color: var(--poggreen);
+            
+            
+        }
 
 
 
